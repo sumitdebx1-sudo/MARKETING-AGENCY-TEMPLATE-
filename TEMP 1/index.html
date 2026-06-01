@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🚀 DIGI Uplift NE | Digital Marketing Agency</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===================== GLOBAL ===================== */
+
+
+.side-stats{
+position:fixed;
+right:15px;
+top:25%;
+display:flex;
+flex-direction:column;
+gap:12px;
+z-index:999;
+}
+
+.side-stats .stat{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+padding:12px 14px;
+border-radius:14px;
+text-align:center;
+min-width:80px;
+transition:0.3s;
+}
+
+.side-stats .stat:hover{
+transform:translateX(-5px);
+border-color:#00ff88;
+}
+
+.side-stats span{
+display:block;
+color:#00ff88;
+font-weight:700;
+font-size:1.1rem;
+}
+
+.side-stats small{
+opacity:0.7;
+font-size:0.75rem;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0a0a0a;
+color:#fff;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+/* ===================== NAV ===================== */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#111;
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+font-size:1.4rem;
+font-weight:800;
+color:#00ff88;
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+.nav-links a{
+opacity:.8;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#00ff88;
+opacity:1;
+}
+
+/* ===================== HERO ===================== */
+
+.hero{
+min-height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:60px 8%;
+}
+
+.hero h1{
+font-size:3.5rem;
+line-height:1.2;
+}
+
+.hero p{
+margin-top:20px;
+opacity:.8;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+line-height:1.7;
+}
+
+.btn{
+margin-top:30px;
+padding:14px 28px;
+border:none;
+background:#00ff88;
+color:#000;
+font-weight:700;
+border-radius:50px;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* ===================== STATS ===================== */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+padding:60px 8%;
+}
+
+.stat-box{
+background:rgba(255,255,255,0.05);
+padding:25px;
+text-align:center;
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.stat-box h2{
+color:#00ff88;
+font-size:2rem;
+}
+
+/* ===================== SECTIONS ===================== */
+
+.section{
+padding:80px 8%;
+}
+
+.section h2{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:40px;
+}
+
+/* ===================== SERVICES ===================== */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#00ff88;
+}
+
+.card h3{
+color:#00ff88;
+margin-bottom:10px;
+}
+
+/* ===================== PROCESS ===================== */
+
+.process{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.step{
+background:#111;
+padding:25px;
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+/* ===================== TESTIMONIALS ===================== */
+
+.testimonial{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.testimonial p{
+opacity:.85;
+line-height:1.7;
+}
+
+.client{
+margin-top:15px;
+color:#00ff88;
+font-weight:600;
+}
+
+/* ===================== CTA ===================== */
+
+.cta{
+text-align:center;
+padding:100px 8%;
+background:linear-gradient(135deg,#00ff8820,#111);
+}
+
+.cta h2{
+font-size:2.8rem;
+}
+
+.cta p{
+margin-top:15px;
+opacity:.8;
+}
+
+/* ===================== FAQ ===================== */
+
+.faq{
+max-width:800px;
+margin:auto;
+}
+
+.faq-item{
+background:#111;
+margin-bottom:10px;
+padding:20px;
+border-radius:15px;
+cursor:pointer;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.faq-item h4{
+color:#00ff88;
+}
+
+/* ===================== FOOTER ===================== */
+
+footer{
+text-align:center;
+padding:40px;
+background:#111;
+margin-top:60px;
+}
+
+/* ===================== WHATSAPP ===================== */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+box-shadow:0 0 20px rgba(37,211,102,0.5);
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.2rem;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<div class="logo">🚀 DIGI Uplift NE</div>
+
+<div class="nav-links">
+<a href="index.html">🏠 Home</a>
+<a href="services.html">💼 Services</a>
+<a href="case-studies.html">📈 Case Studies</a>
+<a href="about.html">👋 About</a>
+<a href="contact.html">📞 Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div>
+<h1>We Build Brands That Generate Revenue 💰</h1>
+
+<p>
+DIGI Uplift NE helps businesses grow with SEO 🔍, Google Ads 📊,
+Meta Ads 📱, Website Development 💻, and AI Automation 🤖.
+</p>
+
+<button class="btn">🚀 Get Free Strategy Call</button>
+</div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+
+<div class="stat-box">
+<h2>250+</h2>
+<p>Leads Generated</p>
+</div>
+
+<div class="stat-box">
+<h2>95+</h2>
+<p>Businesses Helped</p>
+</div>
+
+<div class="stat-box">
+<h2>320%</h2>
+<p>Average Growth</p>
+</div>
+
+<div class="stat-box">
+<h2>4.9⭐</h2>
+<p>Client Rating</p>
+</div>
+
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+
+<h2>💼 Our Services</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🔍 SEO</h3>
+<p>Rank higher on Google and get organic traffic.</p>
+</div>
+
+<div class="card">
+<h3>📊 Google Ads</h3>
+<p>High-quality leads from search & display ads.</p>
+</div>
+
+<div class="card">
+<h3>📱 Social Media</h3>
+<p>Grow your brand presence across platforms.</p>
+</div>
+
+<div class="card">
+<h3>🎯 Meta Ads</h3>
+<p>Facebook & Instagram lead generation.</p>
+</div>
+
+<div class="card">
+<h3>💻 Web Development</h3>
+<p>Fast, modern and conversion-focused websites.</p>
+</div>
+
+<div class="card">
+<h3>🤖 AI Automation</h3>
+<p>Automate leads, CRM and customer journeys.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROCESS -->
+<section class="section">
+
+<h2>⚡ Our Process</h2>
+
+<div class="process">
+
+<div class="step">
+<h3>1️⃣ Audit</h3>
+<p>Analyze your business and competition.</p>
+</div>
+
+<div class="step">
+<h3>2️⃣ Strategy</h3>
+<p>Create custom growth plan.</p>
+</div>
+
+<div class="step">
+<h3>3️⃣ Execute</h3>
+<p>Run campaigns and optimize.</p>
+</div>
+
+<div class="step">
+<h3>4️⃣ Scale</h3>
+<p>Increase ROI and automate growth.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+
+<h2>⭐ Client Testimonials</h2>
+
+<div class="grid">
+
+<div class="testimonial">
+<p>
+“DIGI Uplift NE helped us grow our leads 3x within 3 months.
+Very professional and transparent team.”
+</p>
+<div class="client">Rajesh Sharma • Guwahati</div>
+</div>
+
+<div class="testimonial">
+<p>
+“Our Instagram engagement and sales improved drastically
+after running Meta Ads campaigns.”
+</p>
+<div class="client">Priya Das • Agartala</div>
+</div>
+
+<div class="testimonial">
+<p>
+“Great SEO strategy and website redesign.
+We are now ranking on Google.”
+</p>
+<div class="client">Amit Verma • Kolkata</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+
+<h2>🚀 Ready To Grow Your Business?</h2>
+
+<p>Get a free strategy session and growth roadmap today.</p>
+
+<button class="btn">📞 Book Free Call</button>
+
+</section>
+
+<!-- FAQ -->
+<section class="section faq">
+
+<h2>❓ FAQs</h2>
+
+<div class="faq-item">
+<h4>How fast can I see results?</h4>
+<p>Usually within 30–90 days depending on strategy.</p>
+</div>
+
+<div class="faq-item">
+<h4>Do you work with small businesses?</h4>
+<p>Yes, we help startups and local businesses grow online.</p>
+</div>
+
+<div class="faq-item">
+<h4>Do you guarantee results?</h4>
+<p>We guarantee effort, strategy, and optimization — not fake promises.</p>
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+🚀 DIGI Uplift NE<br>
+📍 Agartala, Tripura<br>
+📧 hello@digiupliftne.com
+</footer>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="#">💬</a>
+
+<!-- SIDE STATS BAR -->
+<div class="side-stats">
+
+    <div class="stat">
+        🚀 <span>250+</span>
+        <small>Leads</small>
+    </div>
+
+    <div class="stat">
+        💼 <span>95+</span>
+        <small>Clients</small>
+    </div>
+
+    <div class="stat">
+        📈 <span>320%</span>
+        <small>Growth</small>
+    </div>
+
+    <div class="stat">
+        ⭐ <span>4.9</span>
+        <small>Rating</small>
+    </div>
+
+</div>
+
+</body>
+</html>
